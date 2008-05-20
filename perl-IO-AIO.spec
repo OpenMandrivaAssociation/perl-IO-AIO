@@ -13,7 +13,7 @@ URL:		http://search.cpan.org/dist/%{module}
 Source:     http://www.cpan.org/modules/by-module/IO/%{module}-%{version}.tar.bz2
 BuildRequires:	perl-devel
 BuildRequires:	libgdbm-devel
-BuildRequires:	libdb2-devel
+BuildRequires:	db2-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
