@@ -1,7 +1,7 @@
 %define	module	IO-AIO
 %define	name	perl-%{module}
 %define	version	3.02
-%define	release	%mkrel 1
+%define	release	%mkrel 2
 
 Name:		%{name}
 Version:	%{version}
@@ -12,9 +12,9 @@ Group:		Development/Perl
 URL:		http://search.cpan.org/dist/%{module}
 Source:     http://www.cpan.org/modules/by-module/IO/%{module}-%{version}.tar.bz2
 BuildRequires:	perl-devel
-BuildRequires:	libgdbm-devel
-BuildRequires:	db2-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildRequires:	gdbm-devel
+BuildRequires:	db4-devel
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 This module implements asynchronous I/O using whatever means your operating
