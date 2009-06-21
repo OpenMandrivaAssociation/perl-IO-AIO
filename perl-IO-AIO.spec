@@ -1,6 +1,6 @@
 %define	module	IO-AIO
 %define	name	perl-%{module}
-%define	version	3.19
+%define	version	3.23
 %define	release	%mkrel 1
 
 Name:		%{name}
@@ -65,7 +65,6 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root)
 %{_mandir}/*/*
+%{_bindir}/treescan
 %{perl_vendorarch}/IO
 %{perl_vendorarch}/auto/IO
-
-
