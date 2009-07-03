@@ -1,6 +1,6 @@
 %define	module	IO-AIO
 %define	name	perl-%{module}
-%define	version	3.26
+%define	version	3.261
 %define	release	%mkrel 1
 
 Name:		%{name}
