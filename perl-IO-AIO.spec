@@ -1,20 +1,20 @@
-%define	module	IO-AIO
-%define	name	perl-%{module}
-%define	version	3.261
-%define	release	%mkrel 1
+%define	upstream_name	 IO-AIO
+%define	upstream_version 3.3
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	Asynchronous Input/Output 
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{module}
-Source:     http://www.cpan.org/modules/by-module/IO/%{module}-%{version}.tar.bz2
-BuildRequires:	perl-devel
-BuildRequires:	gdbm-devel
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/IO/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires:	db4-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRequires:	gdbm-devel
+BuildRequires:	perl-devel
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This module implements asynchronous I/O using whatever means your operating
@@ -46,7 +46,7 @@ displayed in the list. This same mechanism can be expanded by defining
 arbitrary new column types before calling the new function.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
