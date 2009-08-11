@@ -13,6 +13,7 @@ Source0:    http://www.cpan.org/modules/by-module/IO/%{upstream_name}-%{upstream
 
 BuildRequires:	db4-devel
 BuildRequires:	gdbm-devel
+BuildRequires:	perl(common::sense)
 BuildRequires:	perl-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
