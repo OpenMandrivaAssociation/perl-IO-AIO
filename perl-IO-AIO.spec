@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Release:    %mkrel 2
 
 Summary:	Asynchronous Input/Output 
 License:	GPL+ or Artistic
@@ -15,7 +15,10 @@ BuildRequires:	db4-devel
 BuildRequires:	gdbm-devel
 BuildRequires:	perl(common::sense)
 BuildRequires:	perl-devel
+
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
+
+Requires:	perl(common::sense)
 
 %description
 This module implements asynchronous I/O using whatever means your operating
