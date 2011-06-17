@@ -1,5 +1,5 @@
 %define	upstream_name	 IO-AIO
-%define upstream_version 3.8
+%define upstream_version 3.9
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -10,15 +10,12 @@ License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
 Source0:    http://www.cpan.org/modules/by-module/IO/%{upstream_name}-%{upstream_version}.tar.gz
-
-BuildRequires:	db4-devel
+Requires:	perl(common::sense)
+BuildRequires:	db5-devel
 BuildRequires:	gdbm-devel
 BuildRequires:	perl(common::sense)
 BuildRequires:	perl-devel
-
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
-
-Requires:	perl(common::sense)
 
 %description
 This module implements asynchronous I/O using whatever means your operating
