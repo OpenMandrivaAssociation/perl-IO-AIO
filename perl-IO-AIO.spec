@@ -1,5 +1,5 @@
 %define	upstream_name	 IO-AIO
-%define upstream_version 3.93
+%define upstream_version 4.0
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
