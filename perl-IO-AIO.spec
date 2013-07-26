@@ -1,15 +1,15 @@
 %define	upstream_name	 IO-AIO
-%define upstream_version 4.0
+%define upstream_version 4.18
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:	2
+Version:    %perl_convert_version 4.18
+Release:	1
 
 Summary:	Asynchronous Input/Output 
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/IO/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:    http://www.cpan.org/modules/by-module/IO/IO-AIO-4.18.tar.gz
 Requires:	perl(common::sense)
 BuildRequires:	db5-devel
 BuildRequires:	gdbm-devel
@@ -240,4 +240,5 @@ rm -rf %{buildroot}
 
 * Tue Dec 20 2005 Guillaume Rousse <guillomovitch@mandriva.org> 1.61-1mdk
 - first mdk release
+
 
