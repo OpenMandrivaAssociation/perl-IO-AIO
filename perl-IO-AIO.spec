@@ -2,20 +2,19 @@
 %define upstream_version 4.18
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version 4.18
+Version:    %perl_convert_version %{upstream_version}
 Release:	1
 
 Summary:	Asynchronous Input/Output 
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/IO/IO-AIO-4.18.tar.gz
+Source0:    http://www.cpan.org/modules/by-module/IO/IO-AIO-%{upstream_version}.tar.gz
 Requires:	perl(common::sense)
 BuildRequires:	db5-devel
 BuildRequires:	gdbm-devel
 BuildRequires:	perl(common::sense)
 BuildRequires:	perl-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This module implements asynchronous I/O using whatever means your operating
@@ -51,20 +50,17 @@ arbitrary new column types before calling the new function.
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
-%make CFLAGS="$RPM_OPT_FLAGS"
+%make CFLAGS="%{optflags}"
 
 %check
 %{__make} test
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
 
 %clean
-rm -rf %{buildroot}
 
 %files
-%defattr(-,root,root)
 %{_mandir}/*/*
 %{_bindir}/treescan
 %{perl_vendorarch}/IO
@@ -240,5 +236,6 @@ rm -rf %{buildroot}
 
 * Tue Dec 20 2005 Guillaume Rousse <guillomovitch@mandriva.org> 1.61-1mdk
 - first mdk release
+
 
 
