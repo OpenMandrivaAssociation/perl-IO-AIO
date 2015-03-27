@@ -1,9 +1,9 @@
 %define	upstream_name	 IO-AIO
-%define upstream_version 4.31
+%define upstream_version 4.32
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:	3
+Release:	1
 
 Summary:	Asynchronous Input/Output 
 
@@ -50,7 +50,7 @@ arbitrary new column types before calling the new function.
 %setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor
+perl Makefile.PL INSTALLDIRS=vendor
 %make CFLAGS="%{optflags}"
 
 %check
@@ -66,6 +66,3 @@ arbitrary new column types before calling the new function.
 %{_bindir}/treescan
 %{perl_vendorarch}/IO
 %{perl_vendorarch}/auto/IO
-
-
-

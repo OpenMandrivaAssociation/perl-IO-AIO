@@ -1,5 +1,6 @@
 removed_sources:
   IO-AIO-4.0.tar.gz: 210b39abc39d0a1bce8bdf4644dbe13082d7aeb1
   IO-AIO-4.18.tar.gz: 158c76d718a4474607532fdd943ce199ee65213c
-sources:
   IO-AIO-4.31.tar.gz: a5528fd7c24377ebabc403e5662d40bce027aee0
+sources:
+  IO-AIO-4.32.tar.gz: 9486559af32d8901a56cc8b46a39ec8622157dac
