@@ -1,16 +1,16 @@
 %define	upstream_name	 IO-AIO
-%define upstream_version 4.31
+%define upstream_version 4.81
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:	3
+Version:    %{upstream_version}
+Release:	1
 
 Summary:	Asynchronous Input/Output 
 
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/IO/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://metacpan.org/dist/IO-AIO
+Source0:    https://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/IO-AIO-%{upstream_version}.tar.gz
 Requires:	perl(common::sense)
 BuildRequires:	make
 BuildRequires:	db5-devel
